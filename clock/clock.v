@@ -1,13 +1,11 @@
-`timescale 1ps/1ps
+`timescale 1ns/1ps
 
 module clock (
     output reg clk1
 );
 
-    initial begin
-        clk1 = 0;
-    end
+    initial clk1 = 0;
 
-    always #500 clk1 = ~clk1; // toggle every 1 time unit
+    always #1 clk1 = ~clk1; // toggle every 1 time unit
 
 endmodule
