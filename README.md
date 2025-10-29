@@ -5,11 +5,11 @@ This is my recreation of the SAP-1 computer from [Digital Computer Electronics b
 Currently I working through creating the SAP-1 in Logism. I have previously attempted to create parts of the computer in Verilog.
 
 ### Table of Contents
-**[Logism](#Logism)**<br>
-**[Full Adder](##Full Adder)**<br>
-**[4-bit Adder-Subtractor](##4-bit Adder-Subtractor)**<br>
-**[TTL Adder-Subtractor](##TTL Adder-Subtractor)**<br>
-**[Verilog](#Verilog)**<br>
+1. [Logism](#Logism)**<br>
+    - [Full Adder](##Full Adder)
+    - [4-bit Adder-Subtractor](##4-bit Adder-Subtractor)
+    - [TTL Adder-Subtractor](##TTL Adder-Subtractor)
+2. [Verilog](#Verilog)
 
 ## Logism
 
