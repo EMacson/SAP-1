@@ -2,16 +2,16 @@
 
 This is my recreation of the SAP-1 computer from [Digital Computer Electronics by Albert Paul Malvino and Jerald A. Brown](https://ia800809.us.archive.org/34/items/367026792DigitalComputerElectronicsAlbertPaulMalvinoAndJeraldABrownPdf1/367026792-Digital-Computer-Electronics-Albert-Paul-Malvino-and-Jerald-A-Brown-pdf%20%281%29.pdf)
 
-Currently I working through creating the SAP-1 in Logism. I have previously attempted to create parts of the computer in Verilog.
+Currently I working through creating the SAP-1 in Logisim. I have previously attempted to create parts of the computer in Verilog.
 
 ### Table of Contents
-1. [Logism](#logism)
+1. [Logisim](#logisim)
     - [Full Adder](#full-adder)
     - [4-bit Adder-Subtractor](#4-bit-adder-dubtractor)
     - [TTL Adder-Subtractor](#ttl-adder-dubtractor)
 2. [Verilog](#verilog)
 
-## Logism
+## Logisim
 
 The entire SAP-1 circuit is under SAP-1.circ, and logism needs to be installed to open the file. The following sections are in the order in which I created each subcomponent.
 
