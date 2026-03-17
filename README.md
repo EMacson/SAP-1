@@ -1,34 +1,111 @@
-# SAP-1
 
-This is my recreation of the SAP-1 computer from [Digital Computer Electronics by Albert Paul Malvino and Jerald A. Brown](https://ia800809.us.archive.org/34/items/367026792DigitalComputerElectronicsAlbertPaulMalvinoAndJeraldABrownPdf1/367026792-Digital-Computer-Electronics-Albert-Paul-Malvino-and-Jerald-A-Brown-pdf%20%281%29.pdf)
+# SAP-1 Educational Computer
 
-Currently I working through creating the SAP-1 in Logisim. I have previously attempted to create parts of the computer in Verilog.
+A complete recreation of the **SAP-1 (Simple As Possible-1) computer** in **Logisim** with experimental **Verilog HDL** implementations. This project is based on the architecture described in *Digital Computer Electronics* by Albert Paul Malvino and Jerald A. Brown.
 
-### Table of Contents
-1. [Logisim](#logisim)
-    - [Full Adder](#full-adder)
-    - [4-bit Adder-Subtractor](#4-bit-adder-dubtractor)
-    - [TTL Adder-Subtractor](#ttl-adder-dubtractor)
-2. [Verilog](#verilog)
+The repository serves as a hands-on tool to understand basic CPU components, instruction execution, and digital design principles.
 
-## Logisim
+---
 
-The entire SAP-1 circuit is under SAP-1.circ, and logism needs to be installed to open the file. The following sections are in the order in which I created each subcomponent.
+## 📁 Repository Structure
 
-### Full Adder
+```
+SAP-1/
+├── logism/                     # Logisim circuit files
+│   ├── SAP-1.circ              # Completed SAP-1 circuit
+│   ├── Full Adder              # 1-bit full adder sub-circuit
+│   ├── 4-bit Adder-Subtractor  # 4-bit adder-subtractor sub-circuit
+│   └── TTL Adder-Subtractor    # TTL 7483-inspired adder-subtractor
+├── verilog/                    # Experimental Verilog HDL implementations
+├── images/                     # Screenshots of circuits (add your images here)
+├── README.md                   # This file
+├── LICENSE                     # License information
+└── .gitattributes              # Git configuration
+```
 
-<img src="logism\img\full-adder.png" alt="" />
+---
 
-### 4-bit Adder-Subtractor
+## 🖥️ Logisim Implementation
 
-a and b are 4-bit integer inputs. sub indicates if the operation is a subtraction, when sub is set to high then the operation is a-b; otherwise, the operation is a+b.
+The **`SAP-1.circ`** file contains the **completed SAP-1 computer circuit**, including all sub-circuits:
 
-<img src="logism\img\4-bit-adder-subtractor.png" alt="" />
+- Program Counter (PC)
+- Memory Address Register (MAR)
+- Random Access Memory (RAM)
+- Instruction Register (IR)
+- Accumulator (ACC)
+- Arithmetic Logic Unit (ALU)
+- Output Register
+- Control Logic / Timing Signals
 
-### TTL Adder-Subtractor
+The circuit is fully functional in Logisim and supports the SAP-1 instruction set:
 
-The is my recreation of the 7483 4-bit adder. a and b are 8-bit integers and sub indicates a subtraction operation, a high value sets a subtraction operation (a-b).
+- `LDA` – Load value from memory into ACC  
+- `ADD` – Add value from memory to ACC  
+- `SUB` – Subtract value from memory from ACC  
+- `OUT` – Output ACC value  
+- `HLT` – Halt execution
 
-<img src="logism\img\TTL-adder-subtractor.png" alt="" />
+---
 
-## Verilog
+### Program Counter (PC)
+<!-- ![Program Counter](images/pc.png) -->
+**Description:** Increments the memory address each clock cycle to fetch the next instruction.
+
+### Memory Address Register (MAR)
+![Memory Address Register](images/mar.png)  
+**Description:** Holds the address of the memory location to read/write data.
+
+### Instruction Register (IR)
+![Instruction Register](images/ir.png)  
+**Description:** Stores the current instruction fetched from memory for decoding and execution.
+
+### Accumulator (ACC)
+![Accumulator](images/acc.png)  
+**Description:** Main register used by the ALU to perform arithmetic and store results.
+
+### Arithmetic Logic Unit (ALU)
+![Arithmetic Logic Unit](images/alu.png)  
+**Description:** Performs arithmetic operations (ADD, SUB) on the ACC and input values.
+
+### Output Register
+![Output Register](images/output.png)  
+**Description:** Holds the data to be outputted to the display or other external devices.
+
+### Full SAP-1 Circuit
+![Full SAP-1 Circuit](images/sap1_full.png)  
+**Description:** Complete integration of all sub-circuits forming the functional SAP-1 computer.
+
+---
+
+## 💻 Verilog Implementation
+
+The **`verilog/`** folder contains experimental **Verilog HDL implementations** of SAP-1 components. These files provide a digital logic model of the CPU and are intended for simulation and experimentation.
+
+---
+
+## 🔧 How to Use
+
+### Logisim
+1. Install [Logisim Evolution](https://github.com/reds-heig/logisim-evolution).  
+2. Open `logism/SAP-1.circ` in Logisim.  
+3. Run simulations, load instructions, and observe CPU behavior.
+
+### Verilog
+1. Use a Verilog simulator such as **ModelSim**, **Vivado**, or **Icarus Verilog**.  
+2. Compile the files in the `verilog/` folder.  
+3. Simulate components individually or integrate to model CPU behavior.
+
+---
+
+## 📚 References
+
+- Malvino, Albert Paul & Brown, Jerald A. *Digital Computer Electronics*, 6th Edition.  
+- [Logisim Evolution](https://github.com/reds-heig/logisim-evolution) – Open-source digital circuit simulator.
+- https://github.com/KarenOk/SAP-1-Computer
+
+---
+
+## 📝 License
+
+This project is released under the **MIT License**. See the [LICENSE](LICENSE) file for details.
