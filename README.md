@@ -12,15 +12,8 @@ The repository serves as a hands-on tool to understand basic CPU components, ins
 ```
 SAP-1/
 ├── logism/                     # Logisim circuit files
-│   ├── SAP-1.circ              # Completed SAP-1 circuit
-│   ├── Full Adder              # 1-bit full adder sub-circuit
-│   ├── 4-bit Adder-Subtractor  # 4-bit adder-subtractor sub-circuit
-│   └── TTL Adder-Subtractor    # TTL 7483-inspired adder-subtractor
 ├── verilog/                    # Experimental Verilog HDL implementations
-├── images/                     # Screenshots of circuits (add your images here)
-├── README.md                   # This file
-├── LICENSE                     # License information
-└── .gitattributes              # Git configuration
+└── images/                     # Screenshots of circuits
 ```
 
 ---
